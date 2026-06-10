@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: jiaen07/frontend:latest
+          image: jiaen04/frontend:latest
           ports:
             - containerPort: 3000
 ---

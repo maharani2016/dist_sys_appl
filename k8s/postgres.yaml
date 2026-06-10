@@ -16,15 +16,11 @@ spec:
         - name: postgres
           image: postgres:15
           env:
-            - name: POSTGRES_DB
-              value: campusdb
-            - name: POSTGRES_USER
-              value: admin
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: campus-secret
-                  key: SUPABASE_KEY
+                  key: POSTGRES_PASSWORD
           ports:
             - containerPort: 5432
 ---
