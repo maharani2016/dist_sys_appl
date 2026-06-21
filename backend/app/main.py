@@ -25,7 +25,10 @@ app.add_middleware(LoggingMiddleware)
 app.add_middleware(SecurityMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjusted for development
+    allow_origins=[
+        "http://localhost:3000",
+        "https://frontend-production-974f.up.railway.app"
+    ],  # Adjusted for development
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
