@@ -1,0 +1,10 @@
+config:
+  target: "https://backend-production-fb8b.up.railway.app"
+  phases:
+    - duration: 30
+      arrivalRate: 5
+
+scenarios:
+  - flow:
+      - get:
+          url: "/api/v1/students/"

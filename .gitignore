@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+<<<<<<< HEAD
 .venv/
 env/
 
@@ -27,3 +28,26 @@ Thumbs.db
 *.log
 *.tmp
 
+=======
+
+# Virtual Environment
+.venv/
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+.env.local
+
+# Next.js
+.next/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+backend/.venv/
+backend/app.log
+>>>>>>> 43b43d1 (Fix Supabase connection, FastAPI docs and CORS)

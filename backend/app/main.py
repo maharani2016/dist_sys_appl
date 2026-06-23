@@ -21,15 +21,15 @@ app = FastAPI(
 )
 
 # Add Middlewares
-app.add_middleware(LoggingMiddleware)
-app.add_middleware(SecurityMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjusted for development
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.add_middleware(LoggingMiddleware)
+app.add_middleware(SecurityMiddleware)
 
 # Include Transit Routers
 app.include_router(student.router, prefix="/api/v1")
